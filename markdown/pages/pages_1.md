@@ -1,6 +1,6 @@
 Title: About
 
-##40623228網誌
+##40623228分組網誌
 
 課程倉儲: <a href="https://github.com/mdecadp2018/site-40623228">https://github.com/mdecadp2018/site-40623228</a>
 
