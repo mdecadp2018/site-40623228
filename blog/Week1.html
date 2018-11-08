@@ -42,6 +42,7 @@
 
     <link href="https://mdecadp2018.github.io/site-40623228/blog/Week1.html" rel="canonical" />
 
+        <meta name="description" content="當週課程內容:練習github.io建立個人網站">
 
         <meta name="author" content="40623228">
 
@@ -53,7 +54,7 @@
 <!-- Open Graph -->
 <meta property="og:site_name" content="機械設計工程系 40623228 網誌"/>
 <meta property="og:title" content="CADPb-Week 1"/>
-<meta property="og:description" content=""/>
+<meta property="og:description" content="當週課程內容:練習github.io建立個人網站"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://mdecadp2018.github.io/site-40623228/blog/Week1.html"/>
 <meta property="og:type" content="article"/>
@@ -81,7 +82,7 @@
   },
   "image": "https://mdecadp2018.github.io/site-40623228/blog/theme/images/post-bg.jpg",
   "url": "https://mdecadp2018.github.io/site-40623228/blog/Week1.html",
-  "description": ""
+  "description": "當週課程內容:練習github.io建立個人網站"
 }
 </script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
@@ -222,9 +223,33 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <!-- PELICAN_END_SUMMARY -->
-
-<h2>課程倉儲</h2>
+                <p>當週課程內容:練習github.io建立個人網站 
+</p>
+<hr>
+<p>problem1 : git指令不熟悉</p>
+<p>solution1 : 
+<pre><code>
+git 常用指令
+git add .
+新增所有改版內容
+git commit -m "提交訊息, 用來辨識版本"
+在近端提交改版內容
+git push
+將近端改版內容推送到遠端
+git pull
+拉下遠端新版本內容, 在 fossil scm 使用 fossil update
+git log
+查驗 git 提交推送紀錄
+git status
+查驗狀態
+git 新增提交推送的身分綁定
+以 scrum1@mde.tw 註冊帳號為 scrum-1 為例:
+git config --global user.name "scrum-1"
+git config --global user.email "scrum1@mde.tw"
+若網路直接連線過慢, 可以透過 proxy 執行 git
+git config --global http.proxy http://proxy.kmol.info:3128
+以上的 git config 會將設定存入 Y:/home/.gitconfig 檔案中
+</code></pre></p>
 <hr>
             </section>
 
@@ -267,7 +292,7 @@ init_mathjax();
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-left"></i>
                                 <h2 class="post-nav-title">CADPb-Week 2</h2>
-                            <p class="post-nav-excerpt"></p>
+                            <p class="post-nav-excerpt">當週課程內容: 領取課程倉儲 管理個人網站內容及投影片</p>
                         </section>
                     </a>
                     <div class="clear"></div>
