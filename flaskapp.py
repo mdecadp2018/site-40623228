@@ -1404,7 +1404,7 @@ def parse_config():
         # default password is admin
         password="admin"
         hashed_password = hashlib.sha512(password.encode('utf-8')).hexdigest()
-        file.write("siteTitle:CMSimfly \npassword:"+hashed_password)
+        file.write("siteTitle:設計二乙_陳永錩_40623228_CMSimfly網站 \npassword:"+hashed_password)
         file.close()
     config = file_get_contents(config_dir + "config")
     config_data = config.split("\n")
