@@ -1,0 +1,33 @@
+function sysCall_init() 
+    KickBallV = 10
+    R_KickBallVel = (math.pi/180)*KickBallV
+    B_KickBallVel = -(math.pi/180)*KickBallV
+    Sphere_handle=sim.getObjectHandle('Sphere')
+    player_handle=sim.getObjectHandle('player_cloth1')
+    joint_handle =sim.getObjectHandle('left_joint1')
+    slider_handle=sim.getObjectHandle('left_slider1')
+
+end
+function sysCall_actuation()
+    position_player=sim.getObjectPosition(player_handle,-1)
+    position_S=sim.getObjectPosition(Sphere_handle,-1)
+    X =position_S[1] - position_player[1]
+    Y =position_S[2] - position_player[2]
+    if 1 then
+        if X <= 0.02 and Y <= 0 then
+            sim.setJointTargetVelocity(joint_handle,B_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,-1)
+        elseif X > 0.02 and Y <= 0 then
+            sim.setJointTargetVelocity(joint_handle,B_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,1)
+        elseif X <= 0.02 and Y > 0 then           
+            sim.setJointTargetVelocity(joint_handle,R_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,-1)        
+        elseif X > 0.02 and Y > 0 then           
+            sim.setJointTargetVelocity(joint_handle,R_KickBallVel)    
+            sim.setJointTargetVelocity(joint_handle,1)
+        end
+        YYYYY = Y*5
+        sim.setJointTargetVelocity(slider_handle,YYYYY)
+    end
+end
