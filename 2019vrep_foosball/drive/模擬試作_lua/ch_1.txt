@@ -1,0 +1,13 @@
+        --[[if X <= 0.02 and Y <= 0 then
+            sim.setJointTargetVelocity(joint_handle,B_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,-1)
+        elseif X > 0.02 and Y <= 0 then
+            sim.setJointTargetVelocity(joint_handle,B_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,1)
+        elseif X <= 0.02 and Y > 0 then           
+            sim.setJointTargetVelocity(joint_handle,R_KickBallVel)
+            sim.setJointTargetVelocity(joint_handle,-1)        
+        elseif X > 0.02 and Y > 0 then           
+            sim.setJointTargetVelocity(joint_handle,R_KickBallVel)    
+            sim.setJointTargetVelocity(joint_handle,1)
+        end]]

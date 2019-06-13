@@ -39,15 +39,18 @@
 <div class="slides">
 <section data-markdown>
     <script type="text/template">
-## 2018Fall 分組網際簡報
+## 2019協同產品設計實習 
+40623228-期末個人簡報
 
 ### 虎科大機械設計工程系
 
 <small>
-Created by [KMOLab](http://lab.kmol.info/)
+Created by 40623228
 </small>
 
-[2018 Fall 分組網誌](./../blog/index.html)
+[小組倉儲](https://github.com/mdekmol/cd2019b-task1-2019cdb_t1_g1)
+
+
 
 
     </script>
@@ -57,85 +60,103 @@ Created by [KMOLab](http://lab.kmol.info/)
 						
 <section data-markdown>
     <script type="text/template">
-# 投影片快捷鍵
+## Vrep模擬過程檔案
 
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
+[參考資料來自甲班](https://drive.google.com/drive/folders/1GacqL9bHt5YCH1z2LPwK924f57jFgeli?usp=sharing)
+
+
+Lua-球與人的位置用內建指令抓取
+
+
+python-球用影像辨識抓取,人用指令抓取(未完成)
+
+<img src="../images/drive.png"  width="400px">
 
     </script>
 </section>
-
-
-						
-<section>
-<section data-markdown>
-    <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-# 數學符號與方程式
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-    </script>
-</section>
-
 
 
 						
 <section data-markdown>
     <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
+## 模擬V-rep手足球人對電腦-Lua
 
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WBFHkBz3hYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </script>
 </section>
-
 
 
 						
 <section data-markdown>
     <script type="text/template">
-## 使用 iframe 導入影片
+## 模擬V-rep手足球人對電腦-python
 
-### 導入影片 template
-
-<iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lUyVRrzHVPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </script>
 </section>
 
 
 						
+<section data-markdown>
+    <script type="text/template">
+## week11-14 V-rep手足球
+
+人vs電腦-Lua
+
+
+Q:球跟人的位置怎麼抓取
+
+A: sim.getObjectPosition 指令抓取位置
+
+Q:如何讓人追蹤球
+
+A:使用球跟人的位置上的誤差進行補正達到追蹤效果
+
+    </script>
 </section>
 
+
+						
+<section data-markdown>
+    <script type="text/template">
+## week15-16 V-rep手足球
+
+人vs電腦-python
+
+Q:如果實際做出這個專案的話要如何抓取球與人的位置?
+
+A:人的位置可用閉迴路控制的馬達讀取位置
+球的話想到的方法為用影像辨識抓取位置
+
+Q:馬達位置可用指令模擬，但影像辨識怎麼用?
+
+A:影相辨識參考甲班及網路上資料
+    </script>
+</section>
+
+
+						
+<section data-markdown>
+    <script type="text/template">
+## 自評
+
+學員出席(20%) 20分
+
+Github 倉儲管理(20%) 8分
+
+Onshape 協同操作(20%) 2分
+
+V-rep 模擬(20%) 20分
+
+程式開發(20%) 20分
+
+總分:70分
+
+    </script>
+</section>
+
+
+						
 </div>
 
 </div>
